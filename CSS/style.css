@@ -1,0 +1,479 @@
+/* AMBER HOWE */
+/* WEB210-25F-001 */
+/* DEC 1, 2025 */
+
+/* CSS RESET */
+* {margin: 0; padding: 0; box-sizing: border-box;} 
+
+/* VARS FOR ALL COLORS USED */
+:root {
+  --primary-bg-color: #f8f2e4;
+  --primary-accent-color: #e5b46e;
+  --primary-highlight-color: #6b4930;
+  --primary-text: #000000;
+  --primary-white: #ffffff;
+}
+
+/* CUSTOM FONT */
+@font-face {
+  font-family: "font1";
+  src: url(../Fonts/Bodoni_Moda/BodoniModa-VariableFont_opsz,wght.ttf) format("truetype");
+}
+
+
+/* MAIN PAGE */
+/* --------- */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "font1", sans-serif;
+  color: var(--primary-text);
+  background-color: var(--primary-bg-color);
+  line-height: 1.6;
+}
+
+p, li {
+  font-size: 19px;
+}
+
+header {
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+  border: 1px solid black;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+header img.logo {
+  height: 60px;
+}
+
+/* DESKTOP NAV */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav li:hover {
+  text-decoration: underline;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+/* HAMBURGER AND MOBILE NAV */
+.hamburger, .mobile-nav, #menu-toggle {
+  display: none;
+}
+
+/* BOOK NOW NAV BUTTON*/
+.bookNow {
+  text-align: center;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size:15px;
+  margin-left: 0;
+  border: 1px solid black;
+}
+
+/* MAIN PAGE PHOTO */
+.mainLogo {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+}
+
+.mainLogo img {
+  margin-left: -60px;
+  height: 1000px;
+}
+
+.mainLogo-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 40px;
+  border-radius: 8px;
+  margin-top: 200px;
+  font-weight: bold;
+  /*backdrop-filter: blur(6px); MAY PUT BACK ON IN FUTURE*/
+}
+
+.mainLogo-text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.mainLogo-text p {
+  font-size: 20px;
+}
+
+/* MAIN PAGE TEXT */
+.aboutMe {
+  padding-top:500px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+}
+
+section {
+  padding: 60px 20px 20px;
+  text-align: justify;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--primary-accent-color);
+}
+
+section ul{
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+/* BOOK 15 MIN CONSULT BUTTON */
+.button-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-wrapper a {
+  text-decoration: none;
+}
+
+.consult {
+  font-size: 20px;
+  padding: 12px 28px;
+  background-color: var(--primary-accent-color);
+  color: var(--primary-text);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: auto;
+  font-family: "font1", sans-serif;  
+}
+
+.consult:hover {
+  background-color: var(--primary-highlight-color);
+  color: var(--primary-white);
+}
+
+/* MEET PRACTITIONER CARDS, CAN BE MULTIPLE LATER */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.card {
+  background-color: var(--primary-bg-color);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.card img {
+  width: 400px;
+  height: auto;
+  border-radius: 4px;
+}
+
+.card h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* MAKE LINKS NOT BLUE */
+a {
+  color: var(--primary-text)
+}
+
+/* FOOTER */
+footer {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer small {
+  display: block;
+  margin-top: 10px;
+  color: #777;
+}
+
+footer img {
+  height: 60px;
+}
+
+.footer-margin {
+  margin-top: 100px;
+}
+/* CONTACT PAGE */
+/* --------- */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background-color: var(--primary-bg-color);
+  width: 100vw;
+  height: 100vh;
+}
+
+.contact-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  align-items: stretch;
+}
+
+.contact-form {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* DESKTOP CONTACT IMAGE */
+.contact-image {
+  flex: 1;
+  margin: 0;
+  padding: 0 5px 30px;
+  overflow: hidden;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* MOBILE CONTACT IMAGE TEXT ON TOP OF IMAGE */
+.contact-image-text {
+  display: none;
+}
+
+.contact-form h1 {
+  margin-top: 100px;
+  font-size: 42px;
+  margin-bottom: 30px;
+  color: var(--primary-text);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: var(--primary-white);
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+/* DROPDOWN MENU FOR SESSION */
+.dropdown select{
+  margin-bottom: 15px;
+  padding: 8px;
+  width: 100%;
+  font-size: 16px;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text);
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* CUSTOM SEND BUTTON - CONTACT */
+.send {
+  font-size: 20px;
+  padding: 12px 28px;
+  background-color: var(--primary-accent-color);
+  color: var(--primary-text);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 120px;
+  font-family: "font1", sans-serif;  
+}
+
+.send:hover {
+  background-color: var(--primary-highlight-color);
+  color: var(--primary-white);
+}
+
+/* CHANGES CONTACT PAGE FOR MOBILE */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-image {
+    height: 300px;
+  }
+
+  .contact-form {
+    padding: 60px 30px;
+  }
+}
+
+/* CONTACT PHP MESSAGES CSS */
+.form-message {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-message.success {
+    background-color: var(--primary-bg-color);
+    color: #155724;
+    border: var(--primary-accent-color);
+}
+
+.form-message.error {
+    background-color: var(--primary-bg-color);
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+
+/* SERVICES PAGE */
+/* ------------- */
+.services-list {
+  flex: 1;
+  padding: 80px 60px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services-list h1 {
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+.services-list p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.service-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.service-item summary {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  font-weight: bold;
+  list-style: none;
+}
+
+/* REMOVES ARROW BESIDE SERVICE ITEM LIST */
+.service-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.service-item p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* + BUTTONS OPEN TEXT DETAILS & CHANGE TO - AFTER CLICKED */
+.plus-btn::after {
+  content: "+"; 
+  display: inline-block;
+  transition: content 0.3s ease;
+}
+
+.service-item[open] .plus-btn::after {
+  content: "-"; 
+}
+
+.plus-btn {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+/* DESKTOP SERVICES IMAGE */
+.services-image {
+  flex: 1;
+  margin: 0;
+  padding: 60px 20px 0px;
+  overflow: hidden;
+}
+
+.services-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+/* SERVICES PAGE FOR MOBILE */
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column;
+  }
+
+  .services-image {
+    height: 300px;
+    margin-top: 20px;
+  }
+
+  .services-list {
+    padding: 60px 30px;
+  }
+}

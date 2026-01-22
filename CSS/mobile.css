@@ -1,0 +1,368 @@
+/* AMBER HOWE */
+/* WEB210-25F-001 */
+/* DEC 1, 2025 */
+
+/* CSS RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARS FOR ALL COLORS USED */
+:root {
+  --primary-bg-color: #f8f2e4;
+  --primary-accent-color: #e5b46e;
+  --primary-highlight-color: #6b4930;
+  --primary-text: #000000;
+  --primary-white: #ffffff;
+}
+  
+/* CUSTOM FONT */
+@font-face {
+  font-family: "font1";
+  src: url(../Fonts/Bodoni_Moda/BodoniModa-VariableFont_opsz,wght.ttf) format("truetype");
+}
+ 
+
+/* MAIN PAGE */
+/* --------- */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+  
+body {
+  font-family: "font1", sans-serif;
+  color: var(--primary-text);
+  background-color: var(--primary-bg-color);
+  line-height: 1.6;
+}
+
+p, li {
+  font-size: 20px;
+}
+  
+header {
+  padding: 15px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(6px);
+  border: 1px solid black;
+}
+  
+header .container {  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+  
+header img.logo {
+  height: 50px;
+}
+  
+/* DESKTOP NAV */
+.desktop-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+  
+.desktop-nav a {
+  text-decoration: none;
+  color: var(--primary-text);
+  font-weight: bold;
+}
+  
+/* HAMBURGER AND MOBILE NAV */
+/* CHECKBOX DOESNT DISPLAY */
+#menu-toggle {
+  display: none;
+}
+  
+.hamburger {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  position: relative;
+}
+  
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: var(--primary-text);
+  margin-bottom: 5px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+  
+/* DROPDOWN MENU THAT DISPLAYS AFTER CLICKING HAMBURGER MENU */
+.mobile-nav {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background-color: var(--primary-bg-color);
+  flex-direction: column;
+  text-align: center;
+  border-top: 1px solid #000;
+  z-index: 1000;
+}
+  
+.mobile-nav a {
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+  color: var(--primary-text);
+  font-weight: bold;
+}
+
+/* CHECKS MENU-TOGGLE, SHOWS HAMBURGER MENU IN MOBILE */
+#menu-toggle:checked + .hamburger + .mobile-nav {
+  display: flex;
+}
+  
+/* MOBILE MEDIA DISPLAYS HAMBURGER MENU */
+@media screen and (max-width: 900px) {
+  .desktop-nav {
+    display: none; 
+  }
+  
+  .hamburger {
+    display: block; 
+  }
+}
+  
+/* MAIN PAGE IMAGE DISPLAY */
+.mainLogo {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  color: var(--primary-text)
+}
+  
+.mainLogo img {
+  margin-left: -60px;
+  height: 1000px;
+}
+
+.mainLogo-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 40px;
+  border-radius: 8px;
+  color: var(--primary-text);
+  margin-top: 200px;
+  font-weight: bold;
+  /*backdrop-filter: blur(6px);*/
+}
+  
+.mainLogo-text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+  
+.mainLogo-text p {
+  font-size: 20px;
+}
+
+/* MAIN PAGE TEXT */
+.aboutMe {
+  padding-top:480px;
+}
+  
+section {
+  padding: 40px 15px;
+}
+  
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+  
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-accent-color);
+}
+  
+/* BOOK 15 MIN CONSULT BUTTON */
+.button-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+  
+.button-wrapper a {
+  text-decoration: none;
+}
+  
+.consult {
+  font-size: 20px;
+  padding: 12px 28px;
+  background-color: var(--primary-accent-color);
+  color: var(--primary-text);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: auto;
+  font-family: "font1", sans-serif;  
+}
+  
+.consult:hover {
+  background-color: var(--primary-highlight-color);
+  color: var(--primary-white);
+}
+
+/* MEET PRACTITIONER CARDS, CAN BE MULTIPLE LATER */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  text-align: left;
+}
+  
+.card {
+  background-color: var(--primary-bg-color);
+  padding: 5px;
+  border-radius: 8px;
+}
+  
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+  
+.card h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: var(--primary-text);
+}
+  
+/* CONTACT PAGE */
+/* --------- */
+.contact-section, .contact-container {
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+}
+  
+.contact-form {
+  padding: 530px 20px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-right: 20px;
+}
+ 
+/* MOBILE CONTACT IMAGE */
+.contact-image {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 45px;
+  margin-right: 15px;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* MOBILE CONTACT IMAGE TEXT ON TOP OF IMAGE */
+.contact-image-text {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px 40px;
+  color: var(--primary-bg-color);
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* DESKTOP CONTACT IMAGE NO DISPLAY */
+.contact-form-h1 {
+  display: none;
+}
+  
+/* DROPDOWN MENU FOR SESSION */
+.dropdown {
+  margin-bottom: 15px;
+  padding: 8px;
+  width: 100%;
+  font-size: 16px;
+  font-family: "font1", sans-serif;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text);
+  text-align: center;
+  border-radius: 10px;
+}
+
+
+/* SERVICES PAGE */
+/* ------------- */
+.services-container {
+  flex-direction: column;
+}
+  
+.services-list {
+  padding: 550px 15px 15px 10px;
+}
+  
+/* MOBILE SERVICES IMAGE */
+.services-image {
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+  
+.services-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  
+/* MOBILE SERVICES TEXT DISPLAY ON TOP OF IMAGE */
+.services-image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px 40px;
+  border-radius: 8px;
+  color: var(--primary-bg-color);
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* DESKTOP SERVICES TEXT HIDDEN */
+.services-h1-text {
+  display: none;
+}
